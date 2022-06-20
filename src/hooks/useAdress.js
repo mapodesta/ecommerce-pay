@@ -4,7 +4,7 @@ import axios from 'axios';
 const useAddress = (address) => {
   const [map, setMap] = useState({});
   const params = {
-    access_key: '34a348af6fb9b074ae9a640a3dc6e319',
+    access_key: process.env.MAP_ID,
     query: address,
     limit: 1,
   };

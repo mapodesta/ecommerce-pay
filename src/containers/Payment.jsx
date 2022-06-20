@@ -44,7 +44,7 @@ export default function Payment() {
         <div className="Payment-button">
           <PayPalScriptProvider
             options={{
-              'client-id': 'test',
+              'client-id': String(process.env.CLIENT_ID),
             }}
           >
             <PayPalButtons

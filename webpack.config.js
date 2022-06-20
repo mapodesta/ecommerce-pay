@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   // Punto de entrada
@@ -54,7 +55,8 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
-
+    // Dotenv
+    new Dotenv(),
     // Css
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
