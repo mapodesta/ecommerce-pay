@@ -1,9 +1,10 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../styles/components/Information.css';
 
 export default function Information() {
+  const [error, setError] = useState(false);
   const { state, addToBuyer } = useContext(AppContext);
   const form = useRef(null);
   const { cart } = state;
@@ -11,6 +12,7 @@ export default function Information() {
 
   const handleSubmit = () => {
     const formData = new FormData(form.current);
+
     const buyer = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -23,8 +25,12 @@ export default function Information() {
       phone: formData.get('phone'),
     };
 
-    addToBuyer(buyer);
-    navigate('/checkout/payment');
+    if (!Object.values(buyer).some((val) => val === '')) {
+      addToBuyer(buyer);
+      navigate('/checkout/payment');
+    } else {
+      setError(true);
+    }
   };
 
   return (
@@ -46,6 +52,7 @@ export default function Information() {
             <input type="text" placeholder="Telefono" name="phone" />
           </form>
         </div>
+        {error && <h4> Por favor, complete todos los campos</h4>}
         <div className="Information-buttons">
           <div className="Information-back">
             <Link to="/checkout">Regresar</Link>
