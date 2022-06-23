@@ -2,8 +2,17 @@
 
 E-commerce development with react using hooks, custom hooks and integration withs Maps and PayPal.
 
-This project was created without CRA. 
+Adding React Helmet to manage the SEO
 
-Creating the differents configs of  of webpack, babel,eslint and prettier
+This project was created without CRA.
+
+So we realize all configurations like :
+
+Webpack
+Babel
+esLint
+prettier
+
+
 
 
