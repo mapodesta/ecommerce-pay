@@ -25,12 +25,9 @@ To install and run this proyect just type and execute
 npm install
 ```
 ## Preview
-Insert here an image of the preview if your project has one. The image can be into the project, you have to indicate the route and look like this.
 
-![](https://i.ibb.co/sm2tp3S/Captura-de-Pantalla-2022-06-23-a-la-s-12-30-01.png)
+![](https://github.com/mapodesta/ecommerce-pay/blob/master/home.png)
 
-### Notes
-If you want to learn all about markdown i recommend you visit the site [markdown.es](https://markdown.es/sintaxis-markdown/)
 
 
 
